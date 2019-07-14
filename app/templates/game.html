@@ -1,0 +1,23 @@
+{% extends "base_template.html" %}
+
+{% block content %}
+
+    <h1>Rent's Monopoly</h1>
+
+    <form action="" method="POST">
+        <input type="number" value="{{ position }}" hidden />
+        <input type="submit" id="move" name="move" value="Move" />
+        <p>Dice result: {{ result }} </p>
+    </form>
+
+    <ul>
+        {% for place in places -%}
+            <li>
+                {% if loop.index0 == position %}<strong>{% endif %}
+                {{ place }}
+                {% if loop.index0 == position %}</strong>{% endif %}
+            </li>
+        {% endfor -%}
+    </ul>
+
+{% endblock %}
