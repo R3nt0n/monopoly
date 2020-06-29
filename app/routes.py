@@ -1,11 +1,11 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-# R3nt0n
+# r3nt0n
 
 from app import app
 from flask import render_template, redirect, url_for, request
 
-from monopoly import Monopoly
+from app.monopoly import Monopoly
 
 monopoly = Monopoly()
 
